@@ -1,0 +1,2 @@
+This is a rest api implemented in SpringBoot. This api demonstrates a custom response design structure at api level.
+This might need some changes as per anyone's requirements. But this generally resolves the design structure of responses.

@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "73697262-e6b1-4b32-b114-9c7abcaa15af",
+		"name": "ApiResponseCustomDesign",
+		"description": "This collection contains all end points request response examples of this Api.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 12:17:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "It's working.\nThank you. :)"
+				}
+			]
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get employee by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 13:51:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1586958673391,\n    \"message\": \"SUCCESS\",\n    \"code\": \"SUCCESS\",\n    \"payload\": {\n        \"id\": 3,\n        \"name\": \"Virendra Shewag\"\n    }\n}"
+				},
+				{
+					"name": "Get employee by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:42:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587066143479,\n    \"message\": null,\n    \"status\": \"SUCCESS\",\n    \"code\": \"200\",\n    \"payload\": {\n        \"id\": 3,\n        \"name\": \"Virendra Shewag\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all players",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:42:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587066128102,\n    \"message\": null,\n    \"status\": \"SUCCESS\",\n    \"code\": \"200\",\n    \"payload\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sourav Ganguly\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Sachin Ramesh Tendulkar\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Virendra Shewag\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Rohit Sharma\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Virat Kohli\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Ashutosh\"\n        }\n    ],\n    \"error\": null\n}"
+				},
+				{
+					"name": "Get all players",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 13:07:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1586956022959,\n    \"message\": \"SUCCESS\",\n    \"code\": \"SUCCESS\",\n    \"payload\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sourav Ganguly\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Sachin Tendulkar\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Virendra Shewag\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Rohit Sharma\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"MS Dhoni\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Virat Kohli\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get all players",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:39:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587065980714,\n    \"message\": null,\n    \"status\": \"SUCCESS\",\n    \"code\": \"200\",\n    \"payload\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sourav Ganguly\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Sachin Tendulkar\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Virendra Shewag\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Rohit Sharma\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"MS Dhoni\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Virat Kohli\"\n        }\n    ],\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Update player name by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/update/2/Sachin Ramesh Tendulkar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"update",
+						"2",
+						"Sachin Ramesh Tendulkar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update player name by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/update/2/Sachin Ramesh Tendulkar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"update",
+								"2",
+								"Sachin Ramesh Tendulkar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 15:56:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1586966197381,\n    \"message\": \"SUCCESS\",\n    \"code\": \"SUCCESS\",\n    \"payload\": {\n        \"id\": 2,\n        \"name\": \"Sachin Ramesh Tendulkar\"\n    }\n}"
+				},
+				{
+					"name": "Update player name by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/update/2/Sachin Ramesh Tendulkar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"update",
+								"2",
+								"Sachin Ramesh Tendulkar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:41:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587066103304,\n    \"message\": \"200\",\n    \"status\": \"SUCCESS\",\n    \"code\": \"Player updated successfully with id 2\",\n    \"payload\": {\n        \"id\": 2,\n        \"name\": \"Sachin Ramesh Tendulkar\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "delete player by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete player by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:40:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587066059282,\n    \"message\": \"Player removed successfully with id 5\",\n    \"status\": \"SUCCESS\",\n    \"code\": \"200\",\n    \"payload\": null,\n    \"error\": null\n}"
+				},
+				{
+					"name": "delete player by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 17:11:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1586970698000,\n    \"message\": \"SUCCESS\",\n    \"status\": \"Player removed successfully with id5\",\n    \"code\": \"SUCCESS\",\n    \"payload\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Create player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Ashutosh\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/api/player/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create player",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Ashutosh\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/player/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Apr 2020 17:33:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1586972016245,\n    \"message\": \"SUCCESS\",\n    \"status\": \"Player created successfully\",\n    \"code\": \"SUCCESS\",\n    \"payload\": {\n        \"id\": 7,\n        \"name\": \"Ashutosh\"\n    }\n}"
+				},
+				{
+					"name": "Create player",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Ashutosh\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/player/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 19:40:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587066028622,\n    \"message\": \"Player created successfully\",\n    \"status\": \"SUCCESS\",\n    \"code\": \"200\",\n    \"payload\": {\n        \"id\": 7,\n        \"name\": \"Ashutosh\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "test error response end point",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/player/error",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"player",
+						"error"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "test error response end point",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/player/error",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"player",
+								"error"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Apr 2020 18:52:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateTime\": 1587063146844,\n    \"message\": null,\n    \"status\": \"FAILURE\",\n    \"code\": null,\n    \"payload\": null,\n    \"error\": {\n        \"code\": \"500\",\n        \"message\": \"Error occurred during division\",\n        \"details\": \"/ by zero\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

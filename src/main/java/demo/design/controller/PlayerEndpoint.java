@@ -2,8 +2,10 @@ package demo.design.controller;
 
 import demo.design.constant.ResponseConstant;
 import demo.design.domain.Player;
+import demo.design.response.ApiError;
+import demo.design.response.ApiErrorBuilder;
 import demo.design.response.ApiResponse;
-import demo.design.response.PlayerResponse;
+import demo.design.response.ApiResponseBuilder;
 import demo.design.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,23 +31,37 @@ public class PlayerEndpoint
 		if(player!=null && player.getName()!=null)
 		{
 			player = playerService.addPlayer(player);
-			return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), "Player created successfully", ResponseConstant.fromValue(200).code(), player);
+			return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+					.code(ResponseConstant.SUCCESS.code())
+					.message("Player created successfully")
+					.payload(player)
+					.build();
 		}
-		return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), "Player could not be created. Name is missing");
+		return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+				.code(ResponseConstant.SUCCESS.code())
+				.message("Player could not be created. Name is missing")
+				.payload(player)
+				.build();
 	}
 
 	@GetMapping("/{id}")
 	public ApiResponse<Player> getPlayer(@PathVariable("id") long id)
 	{
 		Player p = playerService.getPlayer(id);
-		return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), p);
+		return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+				.code(ResponseConstant.SUCCESS.code())
+				.payload(p)
+				.build();
 	}
 
 	@GetMapping("/all")
 	public ApiResponse<List<Player>> getAllPlayer()
 	{
 		List<Player> players = playerService.getAllPlayer();
-		return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), players);
+		return new ApiResponseBuilder<List<Player>>(ResponseConstant.SUCCESS.name())
+				.code(ResponseConstant.SUCCESS.code())
+				.payload(players)
+				.build();
 	}
 
 	@GetMapping("/update/{id}/{name}")
@@ -54,9 +70,16 @@ public class PlayerEndpoint
 		Player p = playerService.updatePlayer(id, name);
 		if(p!=null)
 		{
-			return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), "Player updated successfully with id "+id, p);
+			return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+					.code(ResponseConstant.SUCCESS.code())
+					.message("Player updated successfully with id "+id)
+					.payload(p)
+					.build();
 		}
-		return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), "Player does not exist with given id "+id);
+		return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+				.code(ResponseConstant.SUCCESS.code())
+				.message("Player does not exist with given id "+id)
+				.build();
 	}
 
 	@GetMapping("/delete/{id}")
@@ -65,23 +88,33 @@ public class PlayerEndpoint
 		int status = playerService.deletePlayer(id);
 		if(status>0)
 		{
-			return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), "Player removed successfully with id "+id);
+			return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+					.code(ResponseConstant.SUCCESS.code())
+					.message("Player removed successfully with id "+id)
+					.build();
 		}
-		return new PlayerResponse<>(ResponseConstant.SUCCESS.name(), ResponseConstant.fromValue(200).code(), "Player does not exist with given id"+id);
+		return new ApiResponseBuilder<Player>(ResponseConstant.SUCCESS.name())
+				.code(ResponseConstant.SUCCESS.code())
+				.message("Player does not exist with given id"+id)
+				.build();
 	}
 
 	@GetMapping("/error")
-	public ApiResponse<Long> testError()
+	public ApiResponse<Player> testError()
 	{
-		ApiResponse<Long> apiResponse = new PlayerResponse<>(ResponseConstant.FAILURE.name(), null, null, null);
 		try
 		{
 			int a = 5/0;
 		}catch(Exception e)
 		{
-			apiResponse.setErrorWithDetails(ResponseConstant.INTERNAL_SERVER_ERROR.code(), "Error occurred during division", e.getMessage());
-			return apiResponse;
+			ApiError apiError = new ApiErrorBuilder("Error occurred during division")
+					.errorCode(ResponseConstant.INTERNAL_SERVER_ERROR.code())
+					.errorDetails(e.getMessage())
+					.build();
+			return new ApiResponseBuilder<Player>(ResponseConstant.FAILURE.name())
+					.error(apiError)
+					.build();
 		}
-		return apiResponse;
+		return null;
 	}
 }

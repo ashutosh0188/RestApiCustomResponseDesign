@@ -1,41 +1,55 @@
 package demo.design.response;
 
+import java.io.Serializable;
+
 /**
- * This is an interface to declare standard methods for creating different types of responses
- * @param <T> generic type of entity/object
+ * This class wraps response of any endpoints defined by it's using Api
+ * and can be instantiated by using it's builder implementation
+ * {@link ApiResponseBuilder} with all it's properties
  *
+ * @param <T> generic type of entity/object
  * @author Ashutosh Srivastava
  * @since 15/04/2020
  */
-public interface ApiResponse<T> extends ApiError
+public class ApiResponse<T> extends AbstractApiResponse implements Serializable
 {
-	/**
-	 * This is getter method which returns payload. This may be used by any object mapper like jackson or ObjectMapper third party libraries.
-	 * @return T is an entity/object
-	 */
-	public T getPayload();
+	private static final long serialVersionUID = 1L;
+
+	private T payload;
+	private ApiError error;
 
 	/**
-	 * This is getter method which returns status. This may be used by any object mapper like jackson or ObjectMapper third party libraries.
-	 * @return status as string
+	 * This is getter method which returns payload. This may be used
+	 * by any object mapper like jackson or ObjectMapper third party libraries.
+	 *
+	 * @return Generic type entity/Object
 	 */
-	public String getStatus();
+	public T getPayload()
+	{
+		return payload;
+	}
 
 	/**
-	 * This is getter method which returns message. This may be used by any object mapper like jackson or ObjectMapper third party libraries.
-	 * @return message as string
+	 * Set payload data
+	 * @param payload payload
 	 */
-	public String getMessage();
+	void setPayload(T payload) {
+		this.payload = payload;
+	}
 
 	/**
-	 * This is getter method which code status. This may be used by any object mapper like jackson or ObjectMapper third party libraries.
-	 * @return code as string
+	 * Get ApiError object
+	 * @return ApiError
 	 */
-	public String getCode();
+	public ApiError getApiError() {
+		return error;
+	}
 
 	/**
-	 * This is getter method which returns current timestamp. This may be used by any object mapper like jackson or ObjectMapper third party libraries.
-	 * @return datetime as currentTimeStamp of machine/server on which this code will be running.
+	 * Set apiError object
+	 * @param error object
 	 */
-	public long getDateTime();
+	void setApiError(ApiError error) {
+		this.error = error;
+	}
 }

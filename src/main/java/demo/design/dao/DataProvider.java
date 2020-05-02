@@ -16,6 +16,11 @@ class DataProvider
 		players.add(new Player(4, "Rohit Sharma"));
 		players.add(new Player(5, "MS Dhoni"));
 		players.add(new Player(6, "Virat Kohli"));
+		players.add(new Player(7, "Hardik Pandey"));
+		players.add(new Player(8, "Yuraj Singh"));
+		players.add(new Player(9, "Gautam Gambhir"));
+		players.add(new Player(10, "Suresh Raina"));
+		players.add(new Player(11, "Zaheer Khan"));
 	}
 	private DataProvider(){}
 

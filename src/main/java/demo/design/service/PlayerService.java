@@ -28,6 +28,10 @@ public class PlayerService
 		return playerDao.fetchAllPlayer();
 	}
 
+	public List<Player> getPlayer(int pageNo, int resultsPerPage) {
+		return playerDao.fetchAllPlayer(pageNo, resultsPerPage);
+	}
+
 	public Player updatePlayer(long id, String name)
 	{
 		if(playerDao.updateName(id, name)>0)

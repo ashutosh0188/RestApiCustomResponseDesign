@@ -78,4 +78,12 @@ abstract class AbstractApiResponse {
     void setMessage(String message) {
         this.message = message;
     }
+
+    /**
+     * Set response current time in millis
+     * @param dateTime current time
+     */
+    void setDateTime(long dateTime) {
+        this.dateTime = dateTime;
+    }
 }

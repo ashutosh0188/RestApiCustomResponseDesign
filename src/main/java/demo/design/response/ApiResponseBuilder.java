@@ -13,14 +13,18 @@ public class ApiResponseBuilder<T> {
      */
     private final ApiResponse<T> apiResponse = new ApiResponse<>();
 
+    public ApiResponseBuilder() {
+    }
+
     /**
      * Parametrized constructor with a required field to instantiate
      * response object with this param
      * Setting status to the response object
      * @param status status
      */
-    public ApiResponseBuilder(String status) {
+    public ApiResponseBuilder<T> status(String status) {
         this.apiResponse.setStatus(status);
+        return this;
     }
 
     /**
@@ -44,6 +48,16 @@ public class ApiResponseBuilder<T> {
     }
 
     /**
+     * Setting dateTime to the response object
+     * @param millis current milliseconds
+     * @return Instance of this class
+     */
+    public ApiResponseBuilder<T> dateTime(long millis) {
+        this.apiResponse.setDateTime(millis);
+        return this;
+    }
+
+    /**
      * Setting payload to the response object
      * @param payload actual data to be send back
      * @return Instance of this class
@@ -62,7 +76,6 @@ public class ApiResponseBuilder<T> {
         this.apiResponse.setApiError(apiError);
         return this;
     }
-
     /**
      * Building and returning the actual response object
      * @return ApiResponse instance

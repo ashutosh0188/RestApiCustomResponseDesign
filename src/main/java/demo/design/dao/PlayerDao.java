@@ -3,6 +3,7 @@ package demo.design.dao;
 import demo.design.domain.Player;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,6 +30,25 @@ public class PlayerDao
 	public List<Player> fetchAllPlayer()
 	{
 		return DataProvider.getPlayers();
+	}
+
+	public List<Player> fetchAllPlayer(int page, int pageSize)
+	{
+		if(page <= 0) {
+			throw new IllegalArgumentException("invalid page no: " + page);
+		}
+		if(pageSize <= 0) {
+			throw new IllegalArgumentException("invalid results per page: " + pageSize);
+		}
+		List<Player> sourceList = DataProvider.getPlayers();
+
+		int fromIndex = (page - 1) * pageSize;
+		if(sourceList.size() < fromIndex){
+			return Collections.emptyList();
+		}
+
+		// toIndex exclusive
+		return sourceList.subList(fromIndex, Math.min(fromIndex + pageSize, sourceList.size()));
 	}
 
 	public long updateName(long id, String name)
